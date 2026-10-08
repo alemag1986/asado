@@ -1,3 +1,4 @@
+import { fmtElapsed } from '@/lib/format';
 import { useEffect, useState } from 'preact/hooks';
 import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
@@ -19,7 +20,14 @@ export function Cook() {
     return () => clearInterval(id);
   }, [startTs]);
 
-  const elapsedMin = startTs != null ? (now - startTs) / 60000 : 0;
+  const elapsedMs = startTs != null ? Math.max(0, now - startTs) : 0;
+  const elapsedMin = elapsedMs / 60000;
+
+  const startClock = () => {
+    const t = Date.now();
+    setStartTs(t);
+    setNow(t);
+  };
 
   return (
     <div class="cook">
@@ -28,15 +36,13 @@ export function Cook() {
 
       <Card label="the bench">
         {startTs == null ? (
-          <Button block onClick={() => setStartTs(Date.now())}>
+          <Button block onClick={startClock}>
             DROP MEAT ON THE FIRE
           </Button>
         ) : (
           <div class="cook__clock">
             <p class="term">fire running</p>
-            <p class="cook__elapsed">
-              {Math.floor(elapsedMin / 60)}:{String(Math.floor(elapsedMin % 60)).padStart(2, '0')}
-            </p>
+            <p class="cook__elapsed">{fmtElapsed(elapsedMs)}</p>
           </div>
         )}
       </Card>

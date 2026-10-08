@@ -3,7 +3,7 @@ import { Card } from '@/components/Card';
 import { Segmented } from '@/components/Segmented';
 import { Stepper } from '@/components/Stepper';
 import { CUTS, CUT_MAP } from '@/lib/cuts';
-import { fmtWeight } from '@/lib/format';
+import { fmtQty, fmtWeight } from '@/lib/format';
 import { buildPlan } from '@/lib/plan';
 import { state, update, toggleCut, setScreen } from '@/lib/store';
 import type { Appetite, TempUnit, Unit } from '@/lib/types';
@@ -118,7 +118,7 @@ export function Meat() {
                   <span class="list__name">{CUT_MAP[item.cutId].name}</span>
                   <span class="mono-sm list__local">{CUT_MAP[item.cutId].local}</span>
                 </td>
-                <td class="list__qty">{item.qty}</td>
+                <td class="list__qty">{fmtQty(item.qty, s.unit)}</td>
               </tr>
             ))}
           </tbody>

@@ -4,7 +4,7 @@ import { Card } from '@/components/Card';
 import { Segmented } from '@/components/Segmented';
 import { FUELS, CUT_MAP } from '@/lib/cuts';
 import { buildFire } from '@/lib/fire';
-import { fmtMinutes } from '@/lib/format';
+import { fmtMinutes, fmtWeight } from '@/lib/format';
 import { analyzeEmbers, type EmberCheck } from '@/lib/analyze';
 import { downscale } from '@/lib/image';
 import { buildPlan } from '@/lib/plan';
@@ -102,7 +102,7 @@ export function Fire() {
         </ul>
         {fire.fuelKg > 0 ? (
           <p class="term" style="color: var(--yolk); margin-top: var(--sp-3)">
-            &gt; budget {fuel.rateKgH} kg/h × {plan.totalKg} kg meat ≈ {fire.fuelKg} kg fuel
+            &gt; budget {fmtWeight(fuel.rateKgH, s.unit)}/h × {fmtWeight(plan.totalKg, s.unit)} meat ≈ {fmtWeight(fire.fuelKg, s.unit)} fuel
             {fire.bigFire ? ' — plan a double firebox' : ''}
           </p>
         ) : (

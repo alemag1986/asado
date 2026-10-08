@@ -1,4 +1,9 @@
+mod domain;
+mod feed;
+mod model_client;
 mod routes;
+
+use std::net::SocketAddr;
 
 use axum::Router;
 use tower_http::{cors::CorsLayer, trace::TraceLayer};
@@ -15,7 +20,7 @@ async fn main() {
         .init();
 
     let app = Router::new()
-        .nest("/api", routes::router())
+        .nest("/api", routes::router(routes::AppState::new()))
         .layer(CorsLayer::permissive())
         .layer(TraceLayer::new_for_http());
 
@@ -24,5 +29,10 @@ async fn main() {
         .await
         .unwrap_or_else(|e| panic!("bind {bind}: {e}"));
     tracing::info!("asado api listening on {bind}");
-    axum::serve(listener, app).await.expect("server error");
+    axum::serve(
+        listener,
+        app.into_make_service_with_connect_info::<SocketAddr>(),
+    )
+    .await
+    .expect("server error");
 }
