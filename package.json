@@ -1,6 +1,7 @@
 {
   "name": "asado-maker",
   "private": true,
+  "packageManager": "pnpm@10.32.1",
   "scripts": {
     "dev": "pnpm -C app dev",
     "build": "pnpm -C app build",
