@@ -1,0 +1,58 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-height: 48px;
+  padding: var(--sp-3) var(--sp-4);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  user-select: none;
+  transition:
+    transform var(--press-ms) steps(2),
+    box-shadow var(--press-ms) steps(2);
+}
+
+/* press = the shadow collapses under your thumb */
+.btn:active {
+  transform: translate(6px, 6px);
+  box-shadow: var(--shadow-press);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary {
+  background: var(--ember);
+  color: var(--ink);
+}
+
+.btn--secondary {
+  background: var(--yolk);
+  color: var(--ink);
+}
+
+.btn--dark {
+  background: var(--ash);
+  color: var(--bone);
+}
+
+.btn--danger {
+  background: var(--flame);
+  color: var(--ink);
+}
+
+.btn--block {
+  width: 100%;
+}

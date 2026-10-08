@@ -1,0 +1,198 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--bone);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--ember);
+  color: var(--ink);
+}
+
+/* visible keyboard focus everywhere, in-palette */
+:focus-visible {
+  outline: 3px solid var(--carne);
+  outline-offset: 2px;
+}
+
+.panel-dark :focus-visible {
+  outline-color: var(--yolk);
+}
+
+/* wider than a phone: relax the column a touch */
+@media (min-width: 720px) {
+  .page__body {
+    max-width: 680px;
+  }
+}
+
+/* never let iOS Safari zoom into a focused input */
+@media (max-width: 600px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ---------- structure ---------- */
+
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+}
+
+.page__body {
+  flex: 1;
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+  padding-top: max(var(--sp-5), env(safe-area-inset-top, 0px));
+  padding-inline: var(--page-pad);
+  padding-bottom: var(--sp-7);
+}
+
+.panel {
+  background: var(--paper);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  padding: var(--sp-4);
+}
+
+.panel--dark {
+  background: var(--ash);
+  color: var(--bone);
+}
+
+.panel--flush {
+  padding: 0;
+}
+
+/* ---------- type ---------- */
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  overflow-wrap: break-word;
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-h1);
+  line-height: var(--leading-display);
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-h2);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mono-sm {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lede {
+  max-width: var(--max-read);
+  font-size: calc(var(--text-body) + 0.125rem);
+}
+
+/* status strip — the terminal voice of the app */
+.term {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+/* rows that must stay on one line (timeline, key/values) */
+.term--scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.input {
+  border: var(--border);
+  background: var(--paper);
+  padding: var(--sp-2) var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  font-weight: 700;
+  min-height: 44px;
+}

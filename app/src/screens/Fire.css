@@ -1,0 +1,181 @@
+.fire {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-5);
+}
+
+.fire__fuel-hint {
+  margin-top: var(--sp-3);
+}
+
+.fire__row {
+  margin-top: var(--sp-3);
+}
+
+.fire__serve {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+}
+
+.time {
+  min-width: 120px;
+  text-align: center;
+}
+
+.fire__img {
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.fire__busy {
+  color: var(--coal);
+}
+
+.fire__should {
+  border: var(--border);
+  background: var(--yolk);
+  padding: var(--sp-3);
+  display: grid;
+  gap: var(--sp-1);
+  color: var(--ink);
+}
+
+.fire__should--yes {
+  background: var(--ember);
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-2) 0;
+  border-bottom: var(--border-thin);
+}
+
+.timeline__row:last-child {
+  border-bottom: none;
+}
+
+.timeline__label {
+  color: var(--yolk);
+}
+
+.timeline__time {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.ritual {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ritual__row {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+  border-bottom: var(--border-thin);
+}
+
+.ritual__row:last-child {
+  border-bottom: none;
+}
+
+.ritual__n {
+  font-weight: 700;
+  color: var(--coal);
+  padding-top: 2px;
+}
+
+.ritual__title {
+  font-weight: 700;
+}
+
+.ritual__detail {
+  margin-top: var(--sp-1);
+}
+
+.check {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.check__box {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  width: 100%;
+  text-align: left;
+  padding: var(--sp-2);
+  border: var(--border-thin);
+  background: var(--paper);
+}
+
+.check__box--on {
+  background: var(--bone);
+}
+
+.check__sq {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  flex: none;
+  border: var(--border);
+  background: var(--paper);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  color: var(--carne);
+}
+
+.check__box--on .check__sq {
+  background: var(--ember);
+  color: var(--ink);
+}
+
+.zones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-2);
+}
+
+.zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  aspect-ratio: 3 / 1;
+  border: var(--border);
+  padding: var(--sp-1);
+}
+
+.zone--h {
+  background: var(--flame);
+}
+
+.zone--m {
+  background: var(--ember);
+}
+
+.zone--l {
+  background: var(--coal);
+  color: var(--bone);
+}

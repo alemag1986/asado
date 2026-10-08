@@ -1,0 +1,135 @@
+.meat {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-5);
+}
+
+.meat__row {
+  margin-top: var(--sp-3);
+}
+
+.meat__rowpair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+
+.meat__picks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-3);
+}
+
+.pick {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-1);
+  padding: var(--sp-3);
+  border: var(--border);
+  background: var(--paper);
+  text-align: left;
+}
+
+.pick--on {
+  background: var(--yolk);
+  box-shadow: var(--shadow-sm);
+  transform: translate(-2px, -2px);
+}
+
+.pick__tier {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coal);
+}
+
+.pick__names {
+  display: flex;
+  flex-direction: column;
+}
+
+.pick__name {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.pick__local {
+  color: var(--coal);
+}
+
+.pick__sw {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  font-weight: 700;
+}
+
+.list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list th {
+  text-align: left;
+  padding: var(--sp-2) var(--sp-2) var(--sp-2) 0;
+  border-bottom: var(--border-thin);
+  color: var(--yolk);
+}
+
+.list td {
+  padding: var(--sp-2) var(--sp-2) var(--sp-2) 0;
+  border-bottom: var(--border-thin);
+  vertical-align: top;
+}
+
+.list tr:last-child td {
+  border-bottom: none;
+}
+
+.list__name {
+  display: block;
+  font-weight: 700;
+}
+
+.list__local {
+  color: var(--yolk);
+}
+
+.list__qty {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.order {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  border: var(--border);
+  background: var(--paper);
+}
+
+.order li:first-child {
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--ink);
+  color: var(--yolk);
+}
+
+.order__item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  border-top: var(--border-thin);
+}
+
+.order__n {
+  font-weight: 700;
+}

@@ -1,0 +1,29 @@
+.card {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background: var(--paper);
+  min-width: 0;
+}
+
+.card--dark {
+  background: var(--ash);
+  color: var(--bone);
+}
+
+/* label sits in a strip welded to the top edge */
+.card__label {
+  display: block;
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--ink);
+  color: var(--yolk);
+}
+
+.card--dark .card__label {
+  background: var(--yolk);
+  color: var(--ink);
+}
+
+.card__body {
+  padding: var(--sp-4);
+  min-width: 0;
+}

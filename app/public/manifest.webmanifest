@@ -1,0 +1,18 @@
+{
+  "name": "ASADO.MAKER",
+  "short_name": "ASADO",
+  "description": "Plan the meat, build the fire, cook it right. Argentine & Uruguayan asado assistant.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF4E2",
+  "theme_color": "#14100C",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

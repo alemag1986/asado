@@ -1,0 +1,63 @@
+/* ============================================================
+   ASADO.MAKER design tokens
+   Retro-computing × neo-brutalism. Fire, meat, poster paper.
+   Rules: 0px radius · 3px ink outlines · hard offset shadows ·
+   no blur, no gradients, no soft grays.
+   ============================================================ */
+
+:root {
+  /* --- palette: the grill --- */
+  --ink: #14100c; /* outlines, text, the terminal */
+  --bone: #fff4e2; /* poster paper — app background */
+  --paper: #fffbf3; /* raised surface (cards) */
+  --ember: #ff6b1a; /* primary orange — main actions */
+  --yolk: #ffc93c; /* yellow — highlights, markers */
+  --carne: #c1463f; /* meat red — secondary accent */
+  --flame: #e8483b; /* light red — urgency, alerts */
+  --ash: #201811; /* dark panel — terminal surfaces */
+  --coal: #7a2e12; /* deep cooked crust — quiet accents */
+
+  /* --- type --- */
+  --font-display: 'Anton', 'Arial Narrow', Impact, sans-serif;
+  --font-body: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* fluid scale — mobile first, 360px base */
+  --text-display: clamp(3.5rem, 17vw, 6.5rem);
+  --text-h1: clamp(2.25rem, 10vw, 3.75rem);
+  --text-h2: clamp(1.5rem, 6vw, 2.25rem);
+  --text-body: clamp(1rem, 2.5vw, 1.125rem);
+  --text-mono: 0.8125rem;
+  --text-mono-sm: 0.6875rem;
+
+  --leading-display: 0.92;
+  --leading-body: 1.5;
+
+  /* --- geometry --- */
+  --radius: 0;
+  --border-w: 3px;
+  --border: var(--border-w) solid var(--ink);
+  --border-thin: 2px solid var(--ink);
+
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-sm: 4px 4px 0 var(--ink);
+  --shadow-lg: 10px 10px 0 var(--ink);
+  --shadow-press: 0 0 0 var(--ink);
+
+  /* --- space (4px base) --- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  --page-pad: clamp(16px, 5vw, 32px);
+  --max-read: 42rem; /* ~70ch at body size */
+  --nav-h: 64px;
+
+  /* --- motion: press only --- */
+  --press-ms: 80ms;
+}

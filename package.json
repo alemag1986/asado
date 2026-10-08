@@ -1,0 +1,15 @@
+{
+  "name": "asado-maker",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -C app dev",
+    "build": "pnpm -C app build",
+    "test": "pnpm -C app test",
+    "typecheck": "pnpm -C app typecheck",
+    "api:check": "cargo check --manifest-path api/Cargo.toml",
+    "api:test": "cargo test --manifest-path api/Cargo.toml"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}

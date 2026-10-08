@@ -1,0 +1,45 @@
+.nav {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 10;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  height: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--ink);
+  border-top: var(--border-w) solid var(--ink);
+}
+
+.nav__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--bone);
+  font-family: var(--font-mono);
+  border-right: var(--border-w) solid var(--bone);
+}
+
+.nav__cell:last-child {
+  border-right: none;
+}
+
+.nav__cell--on {
+  background: var(--ember);
+  color: var(--ink);
+}
+
+.nav__step {
+  font-size: var(--text-mono-sm);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.nav__label {
+  font-size: var(--text-mono);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
