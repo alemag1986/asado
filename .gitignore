@@ -4,6 +4,18 @@ target/
 .env
 .env.local
 *.local
-data/
+/data/
 .DS_Store
 coverage/
+
+# ml pipeline
+ml/.venv/
+ml/out/
+ml/eval/score_report.json
+ml/data/extracted/
+ml/data/images/
+ml/data/*_pairs.jsonl
+ml/data/train.jsonl
+ml/data/val.jsonl
+__pycache__/
+*.pyc

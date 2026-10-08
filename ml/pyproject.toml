@@ -1,0 +1,16 @@
+[project]
+name = "asado-ml"
+version = "0.1.0"
+description = "Dataset pipeline for ASADO.MAKER"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+extract = ["pymupdf4llm", "ocrmypdf"]
+caption = ["torch", "transformers", "pillow", "accelerate"]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["scripts", "eval"]
+addopts = "-q"

@@ -1,0 +1,390 @@
+{
+  "cuts": [
+    {
+      "carve": "Cut across the bones into strips, short side up.",
+      "id": "tira",
+      "kind": "beef",
+      "local": "Tira de asado",
+      "minutes": 75,
+      "name": "Short Ribs",
+      "per_person_kg": 0.4,
+      "prep": "Thick coarse salt 40 min before. Room temp. Never wash.",
+      "pull_rule": "Around 68°C and the bones show — probe-tender. It keeps cooking off the fire.",
+      "rest_min": 10,
+      "rotate_rule": "Do not touch for the first 20 min. Turn when the underside releases on its own.",
+      "signals": [
+        "Fat turns glassy",
+        "Meat pulls back off the bone",
+        "Bark is dark, no sheen"
+      ],
+      "target_temp_c": 68.0,
+      "tier": "slow",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Slice against the grain, thumb-thick, across the strip.",
+      "id": "bife-chorizo",
+      "kind": "beef",
+      "local": "Bife de chorizo",
+      "minutes": 40,
+      "name": "Sirloin Strip",
+      "per_person_kg": 0.3,
+      "prep": "Salt right before the fire. Thick cut, NY-strip shape.",
+      "pull_rule": "55°C center for medium-rare before rest. Carry-over adds ~3°C.",
+      "rest_min": 8,
+      "rotate_rule": "Sear one side until it releases, then rotate a quarter turn for crosshatch.",
+      "signals": [
+        "Surface seared, juicing slows",
+        "Edges curl up from the grate"
+      ],
+      "target_temp_c": 55.0,
+      "tier": "medium",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Slice against the grain across the eye.",
+      "id": "bife-ancho",
+      "kind": "beef",
+      "local": "Bife ancho",
+      "minutes": 40,
+      "name": "Ribeye",
+      "per_person_kg": 0.3,
+      "prep": "Rest at room temp, salt it 30 min out.",
+      "pull_rule": "57°C center. The cap should be tender, not wobbly.",
+      "rest_min": 8,
+      "rotate_rule": "Roll it on its fat edge for 1–2 min once the faces are seared.",
+      "signals": [
+        "Cap feels soft yet springs back",
+        "Fat at the edge renders, starts to crisp"
+      ],
+      "target_temp_c": 57.0,
+      "tier": "medium",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Along the fibers first, then slice across — it needs the cross-cut.",
+      "id": "entrana",
+      "kind": "beef",
+      "local": "Entraña",
+      "minutes": 30,
+      "name": "Skirt Steak",
+      "per_person_kg": 0.25,
+      "prep": "Dry it well, salt both sides just before fire.",
+      "pull_rule": "Springy to the poke, 55°C. It tightens quickly past that.",
+      "rest_min": 5,
+      "rotate_rule": "One fast sear per side. Thin cut: no fiddling.",
+      "signals": [
+        "Crust forms fast — it is thin",
+        "Juice beads stop running clear"
+      ],
+      "target_temp_c": 55.0,
+      "tier": "medium",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Across the grain into wide fajita-style strips.",
+      "id": "vacio",
+      "kind": "beef",
+      "local": "Vacío",
+      "minutes": 60,
+      "name": "Flank",
+      "per_person_kg": 0.35,
+      "prep": "The membrane side goes down first — leave its fat cap on.",
+      "pull_rule": "60°C and the crust is a hard shell. Rest long.",
+      "rest_min": 10,
+      "rotate_rule": "Low heat, patient. Rotate for even browning, never rush it.",
+      "signals": [
+        "Crust cracks like glass",
+        "Inside stays pink while outside darkens"
+      ],
+      "target_temp_c": 60.0,
+      "tier": "slow",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Cut into individual ribs at the table.",
+      "id": "costilla",
+      "kind": "beef",
+      "local": "Costillar",
+      "minutes": 210,
+      "name": "Whole Rib Rack",
+      "per_person_kg": 0.35,
+      "prep": "A full rack is a centerpiece — salt the fat side only.",
+      "pull_rule": "When the short bones bend and the meat sags — 70°C is done, not dry.",
+      "rest_min": 15,
+      "rotate_rule": "Indirect heat zone. Rotate the rack every 40 min, thin end toward the glow.",
+      "signals": [
+        "Skin crisps gradually",
+        "Bone ends darken and release"
+      ],
+      "target_temp_c": 70.0,
+      "tier": "slow",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Separate thigh and leg at the joint.",
+      "id": "pollo",
+      "kind": "other",
+      "local": "Pollo",
+      "minutes": 50,
+      "name": "Chicken Quarters",
+      "per_person_kg": 0.3,
+      "prep": "Butterfly or press flat. Salt and olive oil before fire.",
+      "pull_rule": "75°C at the thickest joint. Never serve pink near the bone.",
+      "rest_min": 5,
+      "rotate_rule": "Skin side away from the hottest coals first, flip when golden.",
+      "signals": [
+        "Skin contracts and blisters",
+        "Clear juices from the deepest poke"
+      ],
+      "target_temp_c": 75.0,
+      "tier": "medium",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Slice thin across the muscle.",
+      "id": "cordero",
+      "kind": "other",
+      "local": "Cordero",
+      "minutes": 120,
+      "name": "Lamb Leg",
+      "per_person_kg": 0.4,
+      "prep": "Patagonian style: salt crust, rosemary optional.",
+      "pull_rule": "62°C for pink middle, more if the crowd likes it done.",
+      "rest_min": 12,
+      "rotate_rule": "Rotate continuously over low coals, slow roast wins here.",
+      "signals": [
+        "Surface turns mahogany",
+        "Leg pulls from the bone tip"
+      ],
+      "target_temp_c": 62.0,
+      "tier": "slow",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Cut coins, then rest each coin against the grain.",
+      "id": "matambre",
+      "kind": "beef",
+      "local": "Matambre",
+      "minutes": 45,
+      "name": "Rolled Flank",
+      "per_person_kg": 0.25,
+      "prep": "If rolled with stuffing, tie snug and cook indirect.",
+      "pull_rule": "65°C through the center.",
+      "rest_min": 8,
+      "rotate_rule": "Rotate the roll a quarter turn every 10 min for even walls.",
+      "signals": [
+        "Roll tightens and steams",
+        "Outer layer turns deep brown"
+      ],
+      "target_temp_c": 65.0,
+      "tier": "medium",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Angle-cut coins or split for a sandwich (choripán).",
+      "id": "chorizo",
+      "kind": "achura",
+      "local": "Chorizo",
+      "minutes": 25,
+      "name": "Criollo Sausage",
+      "per_person_kg": 0.0,
+      "prep": "Place where embers are rippling, not roaring.",
+      "pull_rule": "No pink center — 70°C. Juicy means juicy, not raw.",
+      "rest_min": 3,
+      "rotate_rule": "Turn every 8 min, no piercing to \"help the fat\".",
+      "signals": [
+        "Skin tightens, juices seep out visibly",
+        "Char in spots is good"
+      ],
+      "target_temp_c": 70.0,
+      "tier": "fast",
+      "unit_per_people": 2
+    },
+    {
+      "carve": "Halve lengthwise.",
+      "id": "morcilla",
+      "kind": "achura",
+      "local": "Morcilla",
+      "minutes": 20,
+      "name": "Blood Sausage",
+      "per_person_kg": 0.0,
+      "prep": "Do not prick it. Dark thin casing, low heat.",
+      "pull_rule": "Off the fire just before the skin gets ready to crack.",
+      "rest_min": 2,
+      "rotate_rule": "Turn gently with tongs — a split casing leaks everything.",
+      "signals": [
+        "Tiny fat pearls on the skin",
+        "It plumps without splitting"
+      ],
+      "target_temp_c": 70.0,
+      "tier": "fast",
+      "unit_per_people": 3
+    },
+    {
+      "carve": "Slice thick, serve on warm bread.",
+      "id": "mollejas",
+      "kind": "achura",
+      "local": "Mollejas",
+      "minutes": 25,
+      "name": "Sweetbreads",
+      "per_person_kg": 0.1,
+      "prep": "Whole — never cut them up before the fire.",
+      "pull_rule": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
+      "rest_min": 3,
+      "rotate_rule": "Pressure with the spatula for an even crust, flip once.",
+      "signals": [
+        "Crisp caramel shell outside",
+        "Interior still custard-soft"
+      ],
+      "target_temp_c": null,
+      "tier": "fast",
+      "unit_per_people": null
+    },
+    {
+      "carve": "Serve whole, salted at the table.",
+      "id": "chinchulines",
+      "kind": "achura",
+      "local": "Chinchulines",
+      "minutes": 25,
+      "name": "Chitterlings",
+      "per_person_kg": 0.0,
+      "prep": "Best pre-boiled in salted water 30 min — the short path to tender.",
+      "pull_rule": "Snappy, not leathery. Low heat from then on.",
+      "rest_min": 2,
+      "rotate_rule": "High heat first, rotate until evenly coiled and curled.",
+      "signals": [
+        "They curl and tighten",
+        "Edges blister and crisp"
+      ],
+      "target_temp_c": null,
+      "tier": "fast",
+      "unit_per_people": 4
+    },
+    {
+      "carve": "Eat with the spoon straight off the board.",
+      "id": "provoleta",
+      "kind": "achura",
+      "local": "Provoleta",
+      "minutes": 12,
+      "name": "Provolone Wheel",
+      "per_person_kg": 0.0,
+      "prep": "Slice 2–3 cm thick, oregano + pepper on top.",
+      "pull_rule": "Charr base, lava center. Slide off onto bread, do not flip.",
+      "rest_min": 1,
+      "rotate_rule": "Do not move it — the browned base is the point.",
+      "signals": [
+        "Edges blister brown",
+        "Middle goes molten and shrugs"
+      ],
+      "target_temp_c": null,
+      "tier": "fast",
+      "unit_per_people": 5
+    }
+  ],
+  "fuels": [
+    {
+      "build_min": 50,
+      "hint": "Hardwood only — quebracho, espinillo. Smokier, slower, worth it.",
+      "id": "wood",
+      "label": "Wood",
+      "local": "Leña / quebracho",
+      "rate_kg_h": 1.8
+    },
+    {
+      "build_min": 30,
+      "hint": "The weekday, dependable choice. Lump charcoal, never briquettes.",
+      "id": "charcoal",
+      "label": "Charcoal",
+      "local": "Carbón",
+      "rate_kg_h": 1.1
+    },
+    {
+      "build_min": 5,
+      "hint": "Zero romance, instant control. Fine for steaks and weeknights.",
+      "id": "gas",
+      "label": "Gas",
+      "local": "Gas",
+      "rate_kg_h": 0.0
+    }
+  ],
+  "styles": [
+    {
+      "blurb": "The heartland. Thick quebracho splits burn down to a bed that feeds the rack all afternoon.",
+      "fuel": "leña",
+      "id": "cordoba",
+      "region": "Sierras de Córdoba",
+      "span": "slow start, long finish",
+      "style": "Quebracho country"
+    },
+    {
+      "blurb": "The classic: tira and achuras over a tight charcoal bed, beers in, feuds out.",
+      "fuel": "carbón",
+      "id": "buenosaires",
+      "region": "Buenos Aires",
+      "span": "every weekend",
+      "style": "Parrilla porteña"
+    },
+    {
+      "blurb": "The stove-and-coal hybrid, open all winter. Chivito fills the weekdays.",
+      "fuel": "leña + carbón",
+      "id": "uruguay",
+      "region": "Uruguay",
+      "span": "all year",
+      "style": "Parrilla a la leña"
+    },
+    {
+      "blurb": "Whole lamb on a cross, facing the wind, one rotation rule: patient.",
+      "fuel": "fire pit",
+      "id": "patagonia",
+      "region": "Patagonia",
+      "span": "half a day",
+      "style": "Cordero al asador"
+    },
+    {
+      "blurb": "Dry scrub-wood fires, fast and loud. The embers are hot, the meat moves.",
+      "fuel": "rama seca",
+      "id": "norte",
+      "region": "The North",
+      "span": "quick and wild",
+      "style": "Asado del monte"
+    }
+  ],
+  "markers": [
+    {
+      "col": 9,
+      "color": "#E8483B",
+      "id": "norte",
+      "row": 7
+    },
+    {
+      "col": 12,
+      "color": "#FF6B1A",
+      "id": "cordoba",
+      "row": 8
+    },
+    {
+      "col": 16,
+      "color": "#C1463F",
+      "id": "buenosaires",
+      "row": 10
+    },
+    {
+      "col": 21,
+      "color": "#FFC93C",
+      "id": "uruguay",
+      "row": 11
+    },
+    {
+      "col": 13,
+      "color": "#7A2E12",
+      "id": "patagonia",
+      "row": 17
+    }
+  ],
+  "appetites": [
+    "light",
+    "normal",
+    "heavy"
+  ]
+}
