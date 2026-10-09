@@ -1,0 +1,28 @@
+[Unit]
+Description=ASADO.MAKER VLM - llama-server (Qwen3-VL-4B)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=llama
+Group=llama
+EnvironmentFile=/etc/asado/llama.env
+# Never bind a public interface without the firewall being in place; 8080 is
+# reachable only from the API droplet's private IP.
+ExecStart=/opt/llama.cpp/build/bin/llama-server \
+  -m /opt/models/asado-v0-Q4_K_M.gguf \
+  --mmproj /opt/models/mmproj-f16.gguf \
+  -c 8192 \
+  --host 0.0.0.0 --port 8080 \
+  --jinja \
+  --api-key ${LLAMA_API_KEY}
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65536
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target

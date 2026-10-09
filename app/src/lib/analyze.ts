@@ -2,6 +2,7 @@ import type { Cut, FuelId } from './types';
 
 export interface Analysis {
   sear: 'low' | 'good' | 'dark';
+  fatRender: 'low' | 'good' | 'render';
   donenessEst: number;
   action: 'flip' | 'hold' | 'move_to_low' | 'pull';
   minutes: number;
@@ -18,12 +19,25 @@ export interface EmberCheck {
 
 const MOCK: Analysis = {
   sear: 'good',
+  fatRender: 'good',
   donenessEst: 58,
   action: 'flip',
   minutes: 6,
   confidence: 74,
   tip: "A good sear across most of the surface. Roll it a quarter turn and give the open face two more minutes.",
 };
+
+export function toAnalysis(raw: Record<string, unknown>): Analysis {
+  return {
+    sear: raw.sear as Analysis['sear'],
+    fatRender: (raw.fat_render as Analysis['fatRender']) ?? 'good',
+    donenessEst: Number(raw.doneness_est),
+    action: raw.action as Analysis['action'],
+    minutes: Number(raw.minutes),
+    confidence: Number(raw.confidence),
+    tip: String(raw.tip),
+  };
+}
 
 function mockFor(cut: Cut, probeC?: number): Analysis {
   const tip =
@@ -50,7 +64,7 @@ export async function analyze(
     body.set('cut', cut.id);
     if (probeC != null) body.set('probe_c', String(probeC));
     const resp = await fetch('/api/cook/analyze', { method: 'POST', body });
-    if (resp.ok) return (await resp.json()) as Analysis;
+    if (resp.ok) return toAnalysis((await resp.json()) as Record<string, unknown>);
   } catch {
     /* API unreachable — serve the offline advisor */
   }

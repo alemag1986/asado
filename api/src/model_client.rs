@@ -10,6 +10,15 @@ pub enum Sear {
     Dark,
 }
 
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
+#[serde(rename_all = "lowercase")]
+pub enum FatRender {
+    #[default]
+    Good,
+    Low,
+    Render,
+}
+
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "snake_case")]
 pub enum Action {
@@ -22,6 +31,8 @@ pub enum Action {
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct Analysis {
     pub sear: Sear,
+    #[serde(default)]
+    pub fat_render: FatRender,
     pub doneness_est: u32,
     #[serde(deserialize_with = "deser_action")]
     pub action: Action,
@@ -54,6 +65,7 @@ fn default_analysis(cut: &Cut, probe_c: Option<f64>) -> Analysis {
     };
     Analysis {
         sear: Sear::Good,
+        fat_render: FatRender::Good,
         doneness_est: 58,
         action: Action::Flip,
         minutes: 6,
@@ -113,8 +125,8 @@ pub async fn analyze(cfg: &ModelConfig, cut: &Cut, image: &[u8], probe_c: Option
     let base64_image = base64::Engine::encode(&base64::engine::general_purpose::STANDARD, image);
 
     let prompt = format!(
-        "Photo of a {name} on the grill. Judge the DONENESS and SEAR of the meat in the foreground, not the background. Respond only with the requested JSON.\n\
-         {{ \"sear\": \"low\" | \"good\" | \"dark\", \"doneness_est\": <degrees C 30-95>, \"action\": \"flip\" | \"hold\" | \"move_to_low\" | \"pull\", \"minutes\": <0-20 until next action>, \"confidence\": <0-100>, \"tip\": <1-2 sentences, direct> }}{probe}",
+        "Photo of a {name} on the grill. Judge the DONENESS, SEAR and FAT RENDERING of the meat in the foreground, not the background. Respond only with the requested JSON.\n\
+         {{ \"sear\": \"low\" | \"good\" | \"dark\", \"fat_render\": \"low\" | \"good\" | \"render\", \"doneness_est\": <degrees C 30-95>, \"action\": \"flip\" | \"hold\" | \"move_to_low\" | \"pull\", \"minutes\": <0-20 until next action>, \"confidence\": <0-100>, \"tip\": <1-2 sentences, direct> }}{probe}",
         name = cut.name,
         probe = probe_c
             .filter(|p| p.is_finite())
@@ -136,18 +148,19 @@ pub async fn analyze(cfg: &ModelConfig, cut: &Cut, image: &[u8], probe_c: Option
             "json_schema": {
                 "name": "analysis",
                 "strict": true,
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "sear": { "type": "string", "enum": ["low", "good", "dark"] },
-                        "doneness_est": { "type": "integer" },
-                        "action": { "type": "string", "enum": ["flip", "hold", "move_to_low", "pull"] },
-                        "minutes": { "type": "integer", "minimum": 0, "maximum": 20 },
-                        "confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
-                        "tip": { "type": "string" }
-                    },
-                    "required": ["sear", "doneness_est", "action", "minutes", "confidence", "tip"]
-                }
+    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "sear": { "type": "string", "enum": ["low", "good", "dark"] },
+                            "fat_render": { "type": "string", "enum": ["low", "good", "render"] },
+                            "doneness_est": { "type": "integer" },
+                            "action": { "type": "string", "enum": ["flip", "hold", "move_to_low", "pull"] },
+                            "minutes": { "type": "integer", "minimum": 0, "maximum": 20 },
+                            "confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+                            "tip": { "type": "string" }
+                        },
+                        "required": ["sear", "fat_render", "doneness_est", "action", "minutes", "confidence", "tip"]
+                    }
             }
         },
         "max_tokens": 400
@@ -222,17 +235,18 @@ mod tests {
     fn mock_analysis_echoes_probe_target() {
         let a = default_analysis(cut("tira").unwrap(), Some(61.0));
         assert_eq!(a.action, Action::Flip);
+        assert_eq!(a.fat_render, FatRender::Good);
         assert!(a.tip.contains("61") && a.tip.contains("68"));
     }
 
     #[test]
     fn parses_fenced_and_naked_json() {
         let c = cut("vacio").unwrap();
-        let miss = r#"{"sear":"dark","doneness_est":60,"action":"move_to_low","minutes":8,"confidence":90,"tip":"Shell is hard."}"#;
+        let miss = r#"{"sear":"dark","fat_render":"render","doneness_est":60,"action":"move_to_low","minutes":8,"confidence":90,"tip":"Shell is hard."}"#;
         let got = parse_analysis(miss, c, None);
         assert_eq!(got.unwrap().action, Action::MoveToLow);
 
-        let fenced = "```json\n{\"sear\":\"good\",\"doneness_est\":58,\"action\":\"flip\",\"minutes\":4,\"confidence\":80,\"tip\":\"Keep rolling.\"}\n```";
+        let fenced = "```json\n{\"sear\":\"good\",\"fat_render\":\"good\",\"doneness_est\":58,\"action\":\"flip\",\"minutes\":4,\"confidence\":80,\"tip\":\"Keep rolling.\"}\n```";
         let got = parse_analysis(fenced, c, None).unwrap();
         assert_eq!(got.minutes, 4);
 
@@ -240,5 +254,14 @@ mod tests {
         let bad = r#"{"sear":"good","action":"teleport","doneness_est":58,"minutes":4,"confidence":80,"tip":"x"}"#;
         assert_eq!(parse_analysis(bad, c, None).unwrap().action, Action::Hold);
         assert!(parse_analysis("not json", c, None).is_none());
+    }
+
+    #[test]
+    fn missing_fat_render_defaults_to_good() {
+        let c = cut("vacio").unwrap();
+        let old = r#"{"sear":"low","doneness_est":52,"action":"hold","minutes":6,"confidence":70,"tip":"Cool it down."}"#;
+        let got = parse_analysis(old, c, None).unwrap();
+        assert_eq!(got.sear, Sear::Low);
+        assert_eq!(got.fat_render, FatRender::Good);
     }
 }

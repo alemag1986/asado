@@ -143,6 +143,7 @@ GitHub Actions runs all three jobs on every push to `main` (app, api, ml).
 - [`plan.md`](plan.md) — the authoritative build plan + API contract + cost ladder
 - [`docs/DESIGN.md`](docs/DESIGN.md) — design tokens and component rules
 - [`docs/DATASET.md`](docs/DATASET.md) — dataset + training pipeline guide
+- [`docs/DEPLOY.md`](docs/DEPLOY.md) — DigitalOcean droplets, systemd, firewall, billing
 
 ## Notes
 

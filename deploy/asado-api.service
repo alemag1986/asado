@@ -1,0 +1,20 @@
+[Unit]
+Description=ASADO.MAKER API (axum)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=asado
+Group=asado
+EnvironmentFile=/etc/asado/api.env
+WorkingDirectory=/opt/asado
+ExecStart=/opt/asado/asado-api
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target

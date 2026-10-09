@@ -136,7 +136,8 @@ export function CookCut({ cut, elapsedMin, flipCount, onFlip, tempUnit }: Props)
                 {result.action} — {result.minutes} min · {result.confidence}% sure
               </div>
               <p class="term">
-                sear {result.sear} · est core ~{fmtTemp(result.donenessEst, tempUnit)}
+                sear {result.sear} · fat {result.fatRender} · est core ~
+                {fmtTemp(result.donenessEst, tempUnit)}
               </p>
               <p class="term" style="color: var(--yolk); margin-top: var(--sp-2)">
                 &gt; {result.tip}
