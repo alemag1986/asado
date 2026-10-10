@@ -1,28 +1,29 @@
 export const GRID = [
-  '..........................',
-  '..........................',
-  '....x.....................',
-  '...xx.....................',
-  '...xx...xx................',
-  '..xxx..xxxx...............',
-  '..xx...xxxx................',
-  '..xx...xxxxx...............',
-  '.xx...xxxxxxx..............',
-  '.xx..xxxxxxxxxx............',
-  '.xx.xxxxxxxxxxxxxuux.......',
-  '.x.xxxxxxxxxxxxxxuuux......',
-  '.xx.xxxxxxxxxxxxxxuux......',
-  '..x.xxxxxxxxxxxxxxx........',
-  '...xxxxxxxxxxxxxxx.........',
-  '....xxxxxxxxxxxxx..........',
-  '.....xxxxxxxxxxxx..........',
-  '......xxxxxxxxxx...........',
-  '.......xxxxxxxx............',
-  '........xxxxxx.............',
-  '.........xxxx..............',
-  '.........xx................',
-  '..........xx...............',
-  '..........x................',
+  '..............................',
+  '..............................',
+  '...................xxxx.......',
+  '..................xxxxxxxx....',
+  '.................xxxxxxxxxxx..',
+  '..........xxxx.xxxxxxxxxxxxx..',
+  '.........xxxxxxxxxxxxxxxxxxxx.',
+  '........xxxxxxxxxxxxxxxxxxxxx.',
+  '........xxxxxx.xxxxxxxxxxxxxx.',
+  '........xxxxxxx.xxxxxxxx......',
+  '........xxxxxxxxxxxxxxx.......',
+  '........xxxxxxx........xxxxx..',
+  '.........xxxxxx...............',
+  '..........xxxxx...............',
+  '..........xxxxx...............',
+  '..........xxxxxx..............',
+  '..........xxxxxx..............',
+  '...........xxxxx..............',
+  '...........xxxxx..............',
+  '............xxxx..............',
+  '.............xxx..............',
+  '.............xxx..............',
+  '..............xx..............',
+  '...............x..............',
+  '...............xx.............',
 ];
 
 const CELL = 12;
@@ -48,7 +49,7 @@ export function MapSvg({
     <svg
       viewBox={`0 0 ${width} ${height}`}
       role="img"
-      aria-label="Pixel map of the grill countries"
+      aria-label="Pixel map of the Rio de la Plata grill countries"
       shape-rendering="crispEdges"
       xmlns="http://www.w3.org/2000/svg"
     >

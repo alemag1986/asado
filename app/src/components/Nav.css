@@ -31,6 +31,11 @@
   color: var(--ink);
 }
 
+.nav__cell--home {
+  background: var(--coal);
+  border-right: var(--border-w) solid var(--bone);
+}
+
 .nav__step {
   font-size: var(--text-mono-sm);
   font-weight: 700;

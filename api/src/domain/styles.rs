@@ -65,32 +65,32 @@ pub static STYLES: &[Style] = &[
 pub static MARKERS: &[Marker] = &[
     Marker {
         id: "norte",
-        col: 9,
-        row: 7,
+        col: 10,
+        row: 6,
         color: "#E8483B",
     },
     Marker {
         id: "cordoba",
-        col: 12,
+        col: 11,
         row: 8,
         color: "#FF6B1A",
     },
     Marker {
         id: "buenosaires",
-        col: 16,
-        row: 10,
+        col: 14,
+        row: 12,
         color: "#C1463F",
     },
     Marker {
         id: "uruguay",
         col: 21,
-        row: 11,
+        row: 9,
         color: "#FFC93C",
     },
     Marker {
         id: "patagonia",
-        col: 13,
-        row: 17,
+        col: 14,
+        row: 18,
         color: "#7A2E12",
     },
 ];

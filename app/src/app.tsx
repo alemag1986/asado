@@ -23,7 +23,14 @@ export function App() {
         {screen === 'fire' ? <Fire /> : null}
         {screen === 'cook' ? <Cook /> : null}
       </main>
-      {inWizard ? <Nav items={STEPS} activeId={screen} onSelect={(id) => setScreen(id as typeof screen)} /> : null}
+      {inWizard ? (
+        <Nav
+          items={STEPS}
+          activeId={screen}
+          onSelect={(id) => setScreen(id as typeof screen)}
+          onHome={() => setScreen('landing')}
+        />
+      ) : null}
     </div>
   );
 }

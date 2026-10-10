@@ -58,11 +58,11 @@ const STYLES: Style[] = [
 ];
 
 const MARKERS: MapMarker[] = [
-  { id: 'norte', col: 9, row: 7, color: 'var(--flame)' },
-  { id: 'cordoba', col: 12, row: 8, color: 'var(--ember)' },
-  { id: 'buenosaires', col: 16, row: 10, color: 'var(--carne)' },
-  { id: 'uruguay', col: 21, row: 11, color: 'var(--yolk)' },
-  { id: 'patagonia', col: 13, row: 17, color: 'var(--coal)' },
+  { id: 'norte', col: 10, row: 6, color: 'var(--flame)' },
+  { id: 'cordoba', col: 11, row: 8, color: 'var(--ember)' },
+  { id: 'buenosaires', col: 14, row: 12, color: 'var(--carne)' },
+  { id: 'uruguay', col: 21, row: 9, color: 'var(--yolk)' },
+  { id: 'patagonia', col: 14, row: 18, color: 'var(--coal)' },
 ];
 
 export function Landing() {
