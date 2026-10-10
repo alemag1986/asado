@@ -1,0 +1,15 @@
+:80 {
+	redir https://{host}{uri} permanent
+}
+
+asado.magnati.dev {
+	root * /opt/asado/dist
+	encode gzip
+	handle /api/* {
+		reverse_proxy 127.0.0.1:4000
+	}
+	handle {
+		try_files {path} /index.html
+		file_server
+	}
+}
