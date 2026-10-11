@@ -71,7 +71,9 @@ Headlines are content, not decoration: big Anton words carry the poster. Mono la
 
 ## Assets
 
-- Pixel art only: `image-rendering: pixelated`, square units, palette limited to tokens.
-- The world map (Phase 2) is a grid of colored squares — early-computer graphics, 8-bit
-  games — with square markers per regional grill style.
+- Pixel art for ornaments: square units, `image-rendering: pixelated` where it helps,
+  palette limited to tokens.
+- The landing map (Phase 2) is real geography: Natural Earth 110m coastlines projected to
+  a cropped southern-cone viewBox, drawn as flat ink SVG paths with square markers pinned
+  at true lat/lon per regional grill style.
 - Fonts self-hosted via `@fontsource` (no external CDN).

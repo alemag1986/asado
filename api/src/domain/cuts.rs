@@ -462,3 +462,5 @@ pub static FUELS: &[Fuel] = &[
 ];
 
 pub const BEEF_DEFAULTS: &[&str] = &["tira", "bife-chorizo", "vacio"];
+
+pub const ACHURA_DEFAULTS: &[&str] = &["chorizo", "morcilla", "mollejas", "chinchulines", "provoleta"];

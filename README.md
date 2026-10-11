@@ -10,7 +10,7 @@ meets neo-brutalism: rectangles, hard shadows, poster-paper orange.
 
 The platform splits responsibility on purpose:
 
-- **Step 1 — Meat.** Anyone, appetite, achuras on/off, cut preferences, kg or lb.
+- **Step 1 — Meat.** Anyone, appetite, per-cut picks (mains + achuras), kg or lb.
   Outputs a butcher list with quantities, a cook order, and a budget note.
 - **Step 2 — Fire.** Wood / charcoal / gas. A backwards timeline from serving time
   (when to light, when the coals are ready), an ember-readiness checklist, and a

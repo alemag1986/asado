@@ -24,7 +24,6 @@ export function Fire() {
     adults: s.people,
     kids: s.kids,
     appetite: s.appetite,
-    achuras: s.achuras,
     selected: s.selected,
   });
 

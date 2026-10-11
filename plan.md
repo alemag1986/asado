@@ -15,7 +15,7 @@ Fine-tuned lightweight open-weight VLM, mobile-first PWA, retro-computing × neo
 | Backend | **Rust + axum**, CPU Droplet in TOR1, private VPC to GPU box |
 | Frontend | **Vite + Preact + TypeScript**, hand-rolled CSS (no Tailwind), PWA |
 | Language | English (structure allows ES later) |
-| V1 scope | 3 steps + pixel-map landing + **anonymous community feed** (DO Spaces) |
+| V1 scope | 3 steps + real-map landing + **anonymous community feed** (DO Spaces) |
 
 **Core principle:** numbers come from code, judgment comes from the model. Quantities, temps,
 and timelines are deterministic Rust/domain logic (testable, offline, free). The model only
@@ -76,13 +76,14 @@ asado-maker/
   buttons invert on `:active` (press = shadow collapses to 0).
 - Mobile-first: 360px base, `clamp()` type scale, thumb-reach bottom nav, safe-area insets.
 
-### Phase 2 — App shell: pixel map + 3-step wizard
-- **Landing:** 8-bit South America map (`image-rendering: pixelated`), colorful square
-  markers = regional grill styles (Quebracho/Córdoba, Patagonian cordero, Uruguayan
-  parrilla, Chivito, Asado a la estaca) → tap = style card → "Start" enters wizard.
-- **Step 1 — Meat:** steppers for people, appetite (light/normal/heavy), achuras on/off,
-  kids count, cut preferences, lb/kg toggle. Output: shopping list w/ per-cut lbs, cook
-  order, budget note. Offline-capable.
+### Phase 2 — App shell: real map + 3-step wizard
+- **Landing:** real coastline map of the southern cone (Natural Earth 110m, public
+  domain, drawn as SVG), colorful square markers = regional grill styles
+  (Quebracho/Córdoba, Patagonian cordero, Uruguayan parrilla, Chivito, Asado a la
+  estaca) → tap a marker = style card → "Start" enters wizard.
+- **Step 1 — Meat:** steppers for people, appetite (light/normal/heavy), per-cut picks —
+  mains and achuras chosen individually, kids count, lb/kg toggle. Output: shopping list
+  w/ per-cut lbs, cook order, budget note. Offline-capable.
 - **Step 2 — Fire:** fuel selector (wood / charcoal / gas). Backwards timeline from serving
   time (fire build ~35 min, coal ready ~45 min), ember-readiness checklist, heat-zone
   diagram (pixel grid), fuel calculator (quebracho kg/hour).
@@ -94,7 +95,7 @@ asado-maker/
 
 ### Phase 3 — Rust API with mocked model
 - axum routes implementing the contract below; deterministic domain module with
-  table-driven tests (e.g. 8 adults heavy + achuras → expected lbs).
+  table-driven tests (e.g. 8 adults heavy + achura picks → expected lbs).
 - `model_client`: `reqwest` → OpenAI endpoint, **JSON-schema response_format**,
   25s timeout, 1 retry, per-IP rate limit, in-memory response cache.
 - Mock mode (`MODEL_URL` unset) returning canned structured JSON → UI testable with zero model.
@@ -140,7 +141,7 @@ asado-maker/
 ## API contract (frozen in Phase 3)
 
 ```jsonc
-POST /api/plan        {people, appetite, achuras, kids, cuts[], unit} → {items:[{cut, qty, note}], order[], total_lb}
+POST /api/plan        {people, appetite, kids, cuts[], unit} → {items:[{cut, qty, note}], order[], total_lb}
 POST /api/fire        {fuel, servings, cuts[], ready_by}              → {steps[], timeline[], fuel_kg, checklist[]}
 POST /api/cook/timing {cut, thickness_mm, style}                      → {prep, temps[], rotate_rule, signals[], rest_min}
 POST /api/cook/analyze multipart {image, cut, elapsed_min, fuel}      → {sear, doneness_est, action, minutes, confidence, tip}

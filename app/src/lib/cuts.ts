@@ -237,6 +237,8 @@ export const CUT_MAP: Record<string, Cut> = Object.fromEntries(
 
 export const BEEF_DEFAULTS = ['tira', 'bife-chorizo', 'vacio'];
 
+export const ACHURA_DEFAULTS = ['chorizo', 'morcilla', 'mollejas', 'chinchulines', 'provoleta'];
+
 export const FUELS = [
   {
     id: 'wood',

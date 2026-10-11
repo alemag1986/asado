@@ -9,16 +9,14 @@ import { state, update, toggleCut, setScreen } from '@/lib/store';
 import type { Appetite, TempUnit, Unit } from '@/lib/types';
 import './Meat.css';
 
-type AchurasValue = 'on' | 'off';
-
 export function Meat() {
   const s = state.value;
   const mainCuts = CUTS.filter((c) => c.kind !== 'achura');
+  const achuraCuts = CUTS.filter((c) => c.kind === 'achura');
   const plan = buildPlan({
     adults: s.people,
     kids: s.kids,
     appetite: s.appetite,
-    achuras: s.achuras,
     selected: s.selected,
   });
 
@@ -62,17 +60,6 @@ export function Meat() {
             ]}
           />
         </div>
-        <div class="meat__row">
-          <Segmented<AchurasValue>
-            label="Achuras"
-            value={s.achuras ? 'on' : 'off'}
-            onChange={(v) => update({ achuras: v === 'on' })}
-            options={[
-              { value: 'on', label: 'Achuras' },
-              { value: 'off', label: 'Off' },
-            ]}
-          />
-        </div>
       </Card>
 
       <Card label="the cuts" class="meat__cuts">
@@ -96,6 +83,36 @@ export function Meat() {
                 </span>
                 <span class="pick__sw">
                   ~{fmtWeight(cut.perPersonKg, s.unit)}/pp
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        <p class="mono-sm" style="margin-top: var(--sp-5); margin-bottom: var(--sp-3)">
+          los achuras · optional sides
+        </p>
+        <div class="meat__picks" role="listbox" aria-multiselectable="true">
+          {achuraCuts.map((cut) => {
+            const on = s.selected.includes(cut.id);
+            return (
+              <button
+                key={cut.id}
+                type="button"
+                role="option"
+                aria-selected={on}
+                class={`pick${on ? ' pick--on' : ''}`}
+                onClick={() => toggleCut(cut.id)}
+              >
+                <span class="pick__tier">{cut.tier}</span>
+                <span class="pick__names">
+                  <span class="pick__name">{cut.name}</span>
+                  <span class="mono-sm pick__local">{cut.local}</span>
+                </span>
+                <span class="pick__sw">
+                  {cut.unitPerPeople
+                    ? `${Math.max(1, Math.ceil(s.people / cut.unitPerPeople))} pcs`
+                    : `~${fmtWeight(cut.perPersonKg, s.unit)}/pp`}
                 </span>
               </button>
             );

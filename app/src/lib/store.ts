@@ -1,5 +1,5 @@
 import { signal, effect } from '@preact/signals';
-import { BEEF_DEFAULTS } from './cuts';
+import { ACHURA_DEFAULTS, BEEF_DEFAULTS } from './cuts';
 import type { Appetite, FuelId, Screen, TempUnit, Unit } from './types';
 
 interface State {
@@ -7,7 +7,6 @@ interface State {
   people: number;
   kids: number;
   appetite: Appetite;
-  achuras: boolean;
   unit: Unit;
   temp: TempUnit;
   selected: string[];
@@ -22,10 +21,9 @@ const DEFAULTS: State = {
   people: 8,
   kids: 0,
   appetite: 'normal',
-  achuras: true,
   unit: 'kg',
   temp: 'c',
-  selected: BEEF_DEFAULTS,
+  selected: [...BEEF_DEFAULTS, ...ACHURA_DEFAULTS],
   fuel: 'charcoal',
   readyBy: '20:00',
 };
@@ -34,7 +32,13 @@ function load(): State {
   try {
     const raw = localStorage.getItem(KEY);
     if (!raw) return DEFAULTS;
-    const parsed = JSON.parse(raw) as Partial<State>;
+    const parsed = JSON.parse(raw) as Partial<State> & { achuras?: boolean };
+    // v1 stored achuras as a bool and never put achura cuts in `selected`.
+    // Carry it over: on means the classic achura spread is pre-picked.
+    if (parsed.achuras === true) {
+      parsed.selected = [...new Set([...(parsed.selected ?? []), ...ACHURA_DEFAULTS])];
+    }
+    delete parsed.achuras;
     return { ...DEFAULTS, ...parsed };
   } catch {
     return DEFAULTS;

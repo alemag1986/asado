@@ -1,4 +1,4 @@
-use crate::domain::cuts::{Appetite, CUTS, Cut, CutKind};
+use crate::domain::cuts::{Appetite, Cut, CutKind};
 
 const ACHURA_SHARE: f64 = 0.3;
 const MIN_WEIGHT_KG: f64 = 0.35;
@@ -50,22 +50,17 @@ pub struct MeatPlan {
     pub tip: &'static str,
 }
 
-pub fn build_plan(
-    adults: u32,
-    kids: u32,
-    appetite: Appetite,
-    achuras: bool,
-    selected: &[String],
-) -> MeatPlan {
+pub fn build_plan(adults: u32, kids: u32, appetite: Appetite, selected: &[String]) -> MeatPlan {
     let adults = adults.max(1);
     let adult_eq = adults as f64 + kids as f64 * 0.6;
     let total_kg = adult_eq * appetite.kg();
 
-    let achura_cuts: Vec<&Cut> = if achuras {
-        CUTS.iter().filter(|c| c.kind == CutKind::Achura).collect()
-    } else {
-        Vec::new()
-    };
+    // Achuras are picks like the mains — each one pulls its own quantity.
+    let achura_cuts: Vec<&Cut> = selected
+        .iter()
+        .filter_map(|id| crate::domain::cuts::cut(id))
+        .filter(|c| c.kind == CutKind::Achura)
+        .collect();
 
     let achura_items: Vec<PlanItem> = achura_cuts
         .iter()
@@ -146,8 +141,7 @@ mod tests {
             8,
             0,
             Appetite::Normal,
-            true,
-            &sel(&["tira", "bife-chorizo", "vacio"]),
+            &sel(&["tira", "bife-chorizo", "vacio", "chorizo", "morcilla", "mollejas", "chinchulines", "provoleta"]),
         );
         assert_eq!(p.total_kg, 4.0);
         assert_eq!(p.per_person_kg, 0.5);
@@ -186,13 +180,7 @@ mod tests {
 
     #[test]
     fn four_light_no_achuras_budget_all_to_meat() {
-        let p = build_plan(
-            4,
-            0,
-            Appetite::Light,
-            false,
-            &sel(&["tira", "bife-chorizo", "vacio"]),
-        );
+        let p = build_plan(4, 0, Appetite::Light, &sel(&["tira", "bife-chorizo", "vacio"]));
         assert_eq!(p.total_kg, 1.8);
         assert_eq!(p.order, vec!["bife-chorizo", "vacio", "tira"]);
         assert!(p.items.iter().all(|i| i.qty.ends_with("kg")));
@@ -200,22 +188,22 @@ mod tests {
 
     #[test]
     fn kids_count_as_six_tenths_of_an_adult() {
-        let kids = build_plan(10, 5, Appetite::Normal, false, &sel(&["tira"]));
-        let no_kids = build_plan(13, 0, Appetite::Normal, false, &sel(&["tira"]));
+        let kids = build_plan(10, 5, Appetite::Normal, &sel(&["tira"]));
+        let no_kids = build_plan(13, 0, Appetite::Normal, &sel(&["tira"]));
         assert_eq!(kids.total_kg, no_kids.total_kg); // 10 + 5*0.6 = 13 adults
     }
 
     #[test]
     fn heavy_single_cut_takes_full_budget() {
-        let p = build_plan(8, 0, Appetite::Heavy, false, &sel(&["tira"]));
+        let p = build_plan(8, 0, Appetite::Heavy, &sel(&["tira"]));
         assert_eq!(p.total_kg, 6.0);
         assert_eq!(p.items[0].qty, "6 kg");
     }
 
     #[test]
     fn achura_shares_skim_thirty_percent_off_meat() {
-        let with = build_plan(8, 0, Appetite::Normal, true, &sel(&["tira"]));
-        let without = build_plan(8, 0, Appetite::Normal, false, &sel(&["tira"]));
+        let with = build_plan(8, 0, Appetite::Normal, &sel(&["tira", "chorizo"]));
+        let without = build_plan(8, 0, Appetite::Normal, &sel(&["tira"]));
         assert!(
             with.items
                 .iter()
@@ -231,7 +219,7 @@ mod tests {
 
     #[test]
     fn minimum_per_cut_floor_applies() {
-        let p = build_plan(2, 0, Appetite::Light, false, &sel(&["matambre"]));
+        let p = build_plan(2, 0, Appetite::Light, &sel(&["matambre"]));
         // 2 * 0.4 = 0.8kg budget split to one cut = 0.8 → exceeds floor; pick a tiny crowd cut
         assert!(p.items[0].qty.starts_with("0."));
     }

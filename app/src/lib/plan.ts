@@ -1,4 +1,4 @@
-import { CUTS, CUT_MAP } from './cuts';
+import { CUT_MAP } from './cuts';
 import type { Appetite, Cut, MeatPlan, PlanItem } from './types';
 
 export const APPETITE_KG: Record<Appetite, number> = {
@@ -22,15 +22,16 @@ export function buildPlan(args: {
   adults: number;
   kids: number;
   appetite: Appetite;
-  achuras: boolean;
   selected: string[];
 }): MeatPlan {
-  const { adults, kids, appetite, achuras, selected } = args;
+  const { adults, kids, appetite, selected } = args;
   const adultEq = adults + kids * 0.6;
   const totalKg = adultEq * APPETITE_KG[appetite];
 
-  // Achuras ride on the toggle, all-or-nothing.
-  const achuraCuts = achuras ? CUTS.filter((c) => c.kind === 'achura') : [];
+  // Achuras are picks like the mains — each one pulls its own quantity.
+  const achuraCuts = selected
+    .map((id) => CUT_MAP[id])
+    .filter((c): c is Cut => c?.kind === 'achura');
 
   const achuraItems: PlanItem[] = achuraCuts.map((cut) => {
     const qty = cut.unitPerPeople

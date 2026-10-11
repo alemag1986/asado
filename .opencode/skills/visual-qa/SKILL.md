@@ -23,9 +23,9 @@ that overflow their cards.
 specific screen without clicking through the UI, inject state before load:
 
 ```js
-const base = { people: 8, kids: 0, appetite: 'normal', achuras: true, unit: 'kg', temp: 'c', selected: ['tira','vacio','entrana'], fuel: 'charcoal', readyBy: '20:00' };
+const base = { people: 8, kids: 0, appetite: 'normal', unit: 'kg', temp: 'c', selected: ['tira','vacio','entrana','chorizo','morcilla'], fuel: 'charcoal', readyBy: '20:00' };
 await page.addInitScript(({ s, base }) => {
-  localStorage.setItem('asado.state.v1', JSON.stringify({ ...base, screen: s, selected: ['tira','vacio','entrana'] }));
+  localStorage.setItem('asado.state.v1', JSON.stringify({ ...base, screen: s }));
 }, { s: 'fire', base });
 ```
 

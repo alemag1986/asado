@@ -13,7 +13,7 @@ use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
 use tokio::sync::Mutex;
 
-use crate::domain::cuts::{Appetite, BEEF_DEFAULTS, CUTS, FuelId};
+use crate::domain::cuts::{Appetite, ACHURA_DEFAULTS, BEEF_DEFAULTS, CUTS, FuelId};
 use crate::domain::fire::FirePlan;
 use crate::domain::plan;
 use crate::feed::FeedStore;
@@ -84,7 +84,6 @@ struct PlanReq {
     people: Option<u32>,
     kids: Option<u32>,
     appetite: Option<String>,
-    achuras: Option<bool>,
     cuts: Option<Vec<String>>,
     unit: Option<String>,
 }
@@ -120,18 +119,23 @@ async fn plan_handler(State(_): State<AppState>, Json(req): Json<PlanReq>) -> Js
         .as_deref()
         .and_then(Appetite::parse)
         .unwrap_or(Appetite::Normal);
-    let achuras = req.achuras.unwrap_or(true);
     let cuts = req
         .cuts
         .filter(|c| !c.is_empty())
-        .unwrap_or_else(|| BEEF_DEFAULTS.iter().map(|s| s.to_string()).collect());
+        .unwrap_or_else(|| {
+            BEEF_DEFAULTS
+                .iter()
+                .chain(ACHURA_DEFAULTS.iter())
+                .map(|s| s.to_string())
+                .collect()
+        });
     let unit = if req.unit.as_deref() == Some("lb") {
         "lb"
     } else {
         "kg"
     };
 
-    let p = plan::build_plan(adults, kids, appetite, achuras, &cuts);
+    let p = plan::build_plan(adults, kids, appetite, &cuts);
 
     let items: Vec<PlanItemResp> = p
         .items
