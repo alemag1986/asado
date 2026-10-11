@@ -3,8 +3,8 @@ use serde::Serialize;
 #[derive(Serialize)]
 pub struct Marker {
     pub id: &'static str,
-    pub col: u32,
-    pub row: u32,
+    pub lat: f64,
+    pub lon: f64,
     pub color: &'static str,
 }
 
@@ -18,7 +18,7 @@ pub struct Style {
     pub blurb: &'static str,
 }
 
-/// Regional grill styles — mirrors `app/src/screens/Landing.tsx`.
+/// Regional grill styles — mirrors `app/src/lib/region.ts`.
 pub static STYLES: &[Style] = &[
     Style {
         id: "cordoba",
@@ -65,32 +65,32 @@ pub static STYLES: &[Style] = &[
 pub static MARKERS: &[Marker] = &[
     Marker {
         id: "norte",
-        col: 10,
-        row: 6,
+        lat: -24.782,
+        lon: -65.423,
         color: "#E8483B",
     },
     Marker {
         id: "cordoba",
-        col: 11,
-        row: 8,
+        lat: -31.42,
+        lon: -64.188,
         color: "#FF6B1A",
     },
     Marker {
         id: "buenosaires",
-        col: 14,
-        row: 12,
+        lat: -34.603,
+        lon: -58.382,
         color: "#C1463F",
     },
     Marker {
         id: "uruguay",
-        col: 21,
-        row: 9,
+        lat: -34.905,
+        lon: -56.191,
         color: "#FFC93C",
     },
     Marker {
         id: "patagonia",
-        col: 14,
-        row: 18,
+        lat: -42.771,
+        lon: -65.036,
         color: "#7A2E12",
     },
 ];

@@ -1,7 +1,8 @@
 import { useState } from 'preact/hooks';
 import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
-import { MapSvg, type MapMarker } from '@/lib/map';
+import { RegionMap } from '@/components/RegionMap';
+import { REGION_MARKERS, REGION_SRC } from '@/lib/region';
 import { setScreen } from '@/lib/store';
 import './Landing.css';
 
@@ -57,13 +58,7 @@ const STYLES: Style[] = [
   },
 ];
 
-const MARKERS: MapMarker[] = [
-  { id: 'norte', col: 10, row: 6, color: 'var(--flame)' },
-  { id: 'cordoba', col: 11, row: 8, color: 'var(--ember)' },
-  { id: 'buenosaires', col: 14, row: 12, color: 'var(--carne)' },
-  { id: 'uruguay', col: 21, row: 9, color: 'var(--yolk)' },
-  { id: 'patagonia', col: 14, row: 18, color: 'var(--coal)' },
-];
+const MARKERS = REGION_MARKERS;
 
 export function Landing() {
   const [selected, setSelected] = useState('cordoba');
@@ -76,7 +71,8 @@ export function Landing() {
       <p class="term">system ready — meat, fire, smoke. tap a marker, then fire it up.</p>
 
       <div class="map-frame">
-        <MapSvg markers={MARKERS} selectedId={selected} />
+        <RegionMap markers={MARKERS} selectedId={selected} onSelect={setSelected} />
+        <p class="mono-sm map-frame__src">{REGION_SRC}</p>
       </div>
       <div class="map-keys grid" role="presentation" aria-hidden="true">
         {MARKERS.map((m) => (

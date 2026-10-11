@@ -12,9 +12,50 @@
   padding: var(--sp-3);
 }
 
-.map-frame svg {
+.map-frame__src {
+  margin-top: var(--sp-2);
+  color: var(--coal);
+}
+
+.region-map {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+.region-water {
+  fill: var(--paper);
+}
+
+.region-land {
+  fill: var(--ink);
+  stroke: var(--ink);
+  stroke-width: 0.16;
+  stroke-linejoin: round;
+}
+
+.region-pin {
+  cursor: pointer;
+}
+
+.region-pin__sq {
+  stroke: var(--ink);
+  stroke-width: 0.18;
+}
+
+.region-pin:hover .region-pin__sq {
+  stroke: var(--yolk);
+  stroke-width: 0.35;
+}
+
+.region-pin--on .region-pin__sq {
+  stroke: var(--yolk);
+  stroke-width: 0.5;
+}
+
+.region-pin:focus-visible {
+  outline: 2px solid var(--yolk);
+  outline-offset: 1px;
 }
 
 .grid {

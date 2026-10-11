@@ -352,34 +352,34 @@
   ],
   "markers": [
     {
-      "col": 9,
       "color": "#E8483B",
       "id": "norte",
-      "row": 7
+      "lat": -24.782,
+      "lon": -65.423
     },
     {
-      "col": 12,
       "color": "#FF6B1A",
       "id": "cordoba",
-      "row": 8
+      "lat": -31.42,
+      "lon": -64.188
     },
     {
-      "col": 16,
       "color": "#C1463F",
       "id": "buenosaires",
-      "row": 10
+      "lat": -34.603,
+      "lon": -58.382
     },
     {
-      "col": 21,
       "color": "#FFC93C",
       "id": "uruguay",
-      "row": 11
+      "lat": -34.905,
+      "lon": -56.191
     },
     {
-      "col": 13,
       "color": "#7A2E12",
       "id": "patagonia",
-      "row": 17
+      "lat": -42.771,
+      "lon": -65.036
     }
   ],
   "appetites": [
