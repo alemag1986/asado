@@ -19,6 +19,8 @@ SYSTEM = (
     "validated — never invent numbers."
 )
 
+ACHURA_CUTS = {"chorizo", "morcilla", "mollejas", "chinchulines", "provoleta"}
+
 TASKS = [
     "quantity_for_n",
     "fire_setup_by_fuel",
@@ -37,8 +39,12 @@ def _num(v) -> str:
     return str(v)
 
 
-def _achuras(ex: dict) -> str:
-    return "with achuras" if ex["achuras"] else "no achuras"
+def _achuras(req: dict) -> str:
+    return "with achuras" if ACHURA_CUTS & set(req.get("cuts", [])) else "no achuras"
+
+
+def _achura_flag(req: dict) -> str:
+    return "achuras" if ACHURA_CUTS & set(req.get("cuts", [])) else "plain"
 
 
 def _qty_variants(n: int, appetite: str, achuras: str) -> list[str]:
@@ -59,7 +65,7 @@ def _plan_pairs(cuts: dict, examples: dict) -> list[dict]:
 
         out.append({
             "task": "quantity_for_n",
-            "source": f"plan:{n}:{appetite}:{req['achuras']}:{'+'.join(req['cuts']) or 'default'}",
+            "source": f"plan:{n}:{appetite}:{_achura_flag(req)}:{'+'.join(req['cuts']) or 'default'}",
             "user": _qty_variants(n, appetite, achuras)[i % 3],
             "assistant": (
                 f"About {_num(total_kg)} kg ({_num(total_lb)} lb) of meat in total — "
@@ -75,7 +81,7 @@ def _plan_pairs(cuts: dict, examples: dict) -> list[dict]:
         order = " → ".join(cuts.get(c, {}).get("name", c) for c in resp["order"])
         out.append({
             "task": "shopping_list",
-            "source": f"plan:{n}:{appetite}:{req['achuras']}:{'+'.join(req['cuts']) or 'default'}",
+            "source": f"plan:{n}:{appetite}:{_achura_flag(req)}:{'+'.join(req['cuts']) or 'default'}",
             "user": f"Build a butcher list for {n} people ({appetite} appetite, {achuras}).",
             "assistant": (
                 "Shopping list:\n" + "\n".join(lines)

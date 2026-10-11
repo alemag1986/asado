@@ -5,6 +5,9 @@
         "people": 2,
         "appetite": "light",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -39,6 +42,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "1 pce"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "0.4 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.4 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "0.4 kg"
           }
         ],
         "order": [
@@ -46,13 +64,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.7,
+        "per_person_lb": 1.5,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.2,
-        "total_lb": 0.4,
+        "total_kg": 1.4000000000000001,
+        "total_lb": 3.1,
         "unit": "kg"
       }
     },
@@ -417,36 +438,15 @@
       "request": {
         "people": 2,
         "appetite": "light",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
-          {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.2 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "1 pce"
-          },
           {
             "cut": "tira",
             "note": "",
@@ -464,20 +464,15 @@
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.7,
-        "per_person_lb": 1.5,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.4000000000000001,
-        "total_lb": 3.1,
+        "per_person_kg": 0.65,
+        "per_person_lb": 1.4,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 1.3,
+        "total_lb": 2.9,
         "unit": "kg"
       }
     },
@@ -675,6 +670,9 @@
         "people": 2,
         "appetite": "normal",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -709,6 +707,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "1 pce"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "0.4 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.4 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "0.4 kg"
           }
         ],
         "order": [
@@ -716,13 +729,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.7,
+        "per_person_lb": 1.5,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.2,
-        "total_lb": 0.4,
+        "total_kg": 1.4000000000000001,
+        "total_lb": 3.1,
         "unit": "kg"
       }
     },
@@ -1087,40 +1103,19 @@
       "request": {
         "people": 2,
         "appetite": "normal",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.2 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "1 pce"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "0.4 kg"
+            "qty": "0.5 kg"
           },
           {
             "cut": "bife-chorizo",
@@ -1134,20 +1129,15 @@
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.7,
-        "per_person_lb": 1.5,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.4000000000000001,
-        "total_lb": 3.1,
+        "per_person_kg": 0.65,
+        "per_person_lb": 1.4,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 1.3,
+        "total_lb": 2.9,
         "unit": "kg"
       }
     },
@@ -1345,6 +1335,9 @@
         "people": 2,
         "appetite": "heavy",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -1379,6 +1372,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "1 pce"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "0.4 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.4 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "0.4 kg"
           }
         ],
         "order": [
@@ -1386,13 +1394,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.7,
+        "per_person_lb": 1.5,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.2,
-        "total_lb": 0.4,
+        "total_kg": 1.4000000000000001,
+        "total_lb": 3.1,
         "unit": "kg"
       }
     },
@@ -1757,67 +1768,41 @@
       "request": {
         "people": 2,
         "appetite": "heavy",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.2 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "1 pce"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "0.4 kg"
+            "qty": "0.6 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.4 kg"
+            "qty": "0.5 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "0.4 kg"
+            "qty": "0.5 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.7,
-        "per_person_lb": 1.5,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.4000000000000001,
-        "total_lb": 3.1,
+        "per_person_kg": 0.8,
+        "per_person_lb": 1.8,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 1.6,
+        "total_lb": 3.5,
         "unit": "kg"
       }
     },
@@ -2015,6 +2000,9 @@
         "people": 4,
         "appetite": "light",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -2049,6 +2037,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "1 pce"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "0.5 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.4 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "0.4 kg"
           }
         ],
         "order": [
@@ -2056,13 +2059,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.43,
+        "per_person_lb": 0.9,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.4,
-        "total_lb": 0.9,
+        "total_kg": 1.7000000000000002,
+        "total_lb": 3.7,
         "unit": "kg"
       }
     },
@@ -2427,67 +2433,41 @@
       "request": {
         "people": 4,
         "appetite": "light",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.4 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "1 pce"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "0.5 kg"
+            "qty": "0.7 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.4 kg"
+            "qty": "0.5 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "0.4 kg"
+            "qty": "0.6 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.43,
-        "per_person_lb": 0.9,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.7000000000000002,
-        "total_lb": 3.7,
+        "per_person_kg": 0.45,
+        "per_person_lb": 1.0,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 1.8,
+        "total_lb": 4.0,
         "unit": "kg"
       }
     },
@@ -2685,6 +2665,9 @@
         "people": 4,
         "appetite": "normal",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -2719,6 +2702,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "1 pce"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "0.6 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.5 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "0.6 kg"
           }
         ],
         "order": [
@@ -2726,13 +2724,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.53,
+        "per_person_lb": 1.2,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.4,
-        "total_lb": 0.9,
+        "total_kg": 2.1,
+        "total_lb": 4.6,
         "unit": "kg"
       }
     },
@@ -3097,67 +3098,41 @@
       "request": {
         "people": 4,
         "appetite": "normal",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.4 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "1 pce"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "0.6 kg"
+            "qty": "0.9 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.5 kg"
+            "qty": "0.7 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "0.6 kg"
+            "qty": "0.8 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.53,
-        "per_person_lb": 1.2,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 2.1,
-        "total_lb": 4.6,
+        "per_person_kg": 0.63,
+        "per_person_lb": 1.4,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 2.5,
+        "total_lb": 5.5,
         "unit": "kg"
       }
     },
@@ -3355,6 +3330,9 @@
         "people": 4,
         "appetite": "heavy",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -3389,6 +3367,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "1 pce"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "0.8 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.6 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "0.7 kg"
           }
         ],
         "order": [
@@ -3396,13 +3389,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.63,
+        "per_person_lb": 1.4,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.4,
-        "total_lb": 0.9,
+        "total_kg": 2.5,
+        "total_lb": 5.5,
         "unit": "kg"
       }
     },
@@ -3767,67 +3763,41 @@
       "request": {
         "people": 4,
         "appetite": "heavy",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.4 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "1 pce"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "1 pce"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "0.8 kg"
+            "qty": "1.2 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.6 kg"
+            "qty": "0.9 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "0.7 kg"
+            "qty": "1 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.63,
-        "per_person_lb": 1.4,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 2.5,
-        "total_lb": 5.5,
+        "per_person_kg": 0.78,
+        "per_person_lb": 1.7,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 3.1,
+        "total_lb": 6.8,
         "unit": "kg"
       }
     },
@@ -4025,6 +3995,9 @@
         "people": 6,
         "appetite": "light",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -4059,6 +4032,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "2 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "0.7 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.5 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "0.6 kg"
           }
         ],
         "order": [
@@ -4066,13 +4054,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.12,
-        "per_person_lb": 0.3,
+        "per_person_kg": 0.42,
+        "per_person_lb": 0.9,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.7000000000000001,
-        "total_lb": 1.5,
+        "total_kg": 2.5,
+        "total_lb": 5.5,
         "unit": "kg"
       }
     },
@@ -4437,67 +4428,41 @@
       "request": {
         "people": 6,
         "appetite": "light",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.7 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "2 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "0.7 kg"
+            "qty": "1 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.5 kg"
+            "qty": "0.7 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "0.6 kg"
+            "qty": "0.9 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.42,
+        "per_person_kg": 0.43,
         "per_person_lb": 0.9,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 2.5,
-        "total_lb": 5.5,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 2.6,
+        "total_lb": 5.7,
         "unit": "kg"
       }
     },
@@ -4695,6 +4660,9 @@
         "people": 6,
         "appetite": "normal",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -4729,6 +4697,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "2 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "0.9 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.7 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "0.8 kg"
           }
         ],
         "order": [
@@ -4736,13 +4719,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.12,
-        "per_person_lb": 0.3,
+        "per_person_kg": 0.52,
+        "per_person_lb": 1.1,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.7000000000000001,
-        "total_lb": 1.5,
+        "total_kg": 3.1,
+        "total_lb": 6.8,
         "unit": "kg"
       }
     },
@@ -5107,67 +5093,41 @@
       "request": {
         "people": 6,
         "appetite": "normal",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.7 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "2 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "0.9 kg"
+            "qty": "1.3 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.7 kg"
+            "qty": "1 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "0.8 kg"
+            "qty": "1.2 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.52,
-        "per_person_lb": 1.1,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 3.1,
-        "total_lb": 6.8,
+        "per_person_kg": 0.58,
+        "per_person_lb": 1.3,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 3.5,
+        "total_lb": 7.7,
         "unit": "kg"
       }
     },
@@ -5365,6 +5325,9 @@
         "people": 6,
         "appetite": "heavy",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -5399,6 +5362,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "2 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "1.3 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.9 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1.1 kg"
           }
         ],
         "order": [
@@ -5406,13 +5384,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.12,
-        "per_person_lb": 0.3,
+        "per_person_kg": 0.67,
+        "per_person_lb": 1.5,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.7000000000000001,
-        "total_lb": 1.5,
+        "total_kg": 4.0,
+        "total_lb": 8.8,
         "unit": "kg"
       }
     },
@@ -5777,67 +5758,41 @@
       "request": {
         "people": 6,
         "appetite": "heavy",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.7 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "2 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "1.3 kg"
+            "qty": "1.8 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.9 kg"
+            "qty": "1.3 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1.1 kg"
+            "qty": "1.6 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.67,
-        "per_person_lb": 1.5,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 4.0,
-        "total_lb": 8.8,
+        "per_person_kg": 0.78,
+        "per_person_lb": 1.7,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 4.7,
+        "total_lb": 10.4,
         "unit": "kg"
       }
     },
@@ -6035,6 +5990,9 @@
         "people": 8,
         "appetite": "light",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -6069,6 +6027,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "2 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "0.9 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.7 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "0.8 kg"
           }
         ],
         "order": [
@@ -6076,13 +6049,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.4,
+        "per_person_lb": 0.9,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.8,
-        "total_lb": 1.8,
+        "total_kg": 3.2,
+        "total_lb": 7.1,
         "unit": "kg"
       }
     },
@@ -6447,67 +6423,41 @@
       "request": {
         "people": 8,
         "appetite": "light",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.8 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "2 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "0.9 kg"
+            "qty": "1.3 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.7 kg"
+            "qty": "1 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "0.8 kg"
+            "qty": "1.1 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.4,
+        "per_person_kg": 0.43,
         "per_person_lb": 0.9,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 3.2,
-        "total_lb": 7.1,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 3.4000000000000004,
+        "total_lb": 7.5,
         "unit": "kg"
       }
     },
@@ -6705,6 +6655,9 @@
         "people": 8,
         "appetite": "normal",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -6739,6 +6692,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "2 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "1.2 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.9 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1.1 kg"
           }
         ],
         "order": [
@@ -6746,13 +6714,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.5,
+        "per_person_lb": 1.1,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.8,
-        "total_lb": 1.8,
+        "total_kg": 4.0,
+        "total_lb": 8.8,
         "unit": "kg"
       }
     },
@@ -7117,67 +7088,41 @@
       "request": {
         "people": 8,
         "appetite": "normal",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.8 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "2 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "1.2 kg"
+            "qty": "1.7 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.9 kg"
+            "qty": "1.3 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1.1 kg"
+            "qty": "1.5 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.5,
-        "per_person_lb": 1.1,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 4.0,
-        "total_lb": 8.8,
+        "per_person_kg": 0.56,
+        "per_person_lb": 1.2,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 4.5,
+        "total_lb": 9.9,
         "unit": "kg"
       }
     },
@@ -7375,6 +7320,9 @@
         "people": 8,
         "appetite": "heavy",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -7409,6 +7357,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "2 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "1.6 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "1.2 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1.4 kg"
           }
         ],
         "order": [
@@ -7416,13 +7379,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.63,
+        "per_person_lb": 1.4,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 0.8,
-        "total_lb": 1.8,
+        "total_kg": 5.0,
+        "total_lb": 11.0,
         "unit": "kg"
       }
     },
@@ -7787,67 +7753,41 @@
       "request": {
         "people": 8,
         "appetite": "heavy",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "0.8 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "2 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "2 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "1.6 kg"
+            "qty": "2.3 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "1.2 kg"
+            "qty": "1.8 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1.4 kg"
+            "qty": "2 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.63,
-        "per_person_lb": 1.4,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 5.0,
-        "total_lb": 11.0,
+        "per_person_kg": 0.76,
+        "per_person_lb": 1.7,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 6.1000000000000005,
+        "total_lb": 13.4,
         "unit": "kg"
       }
     },
@@ -8045,6 +7985,9 @@
         "people": 10,
         "appetite": "light",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -8079,6 +8022,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "2 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "1.1 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "0.8 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1 kg"
           }
         ],
         "order": [
@@ -8086,13 +8044,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.39,
+        "per_person_lb": 0.9,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.0,
-        "total_lb": 2.2,
+        "total_kg": 3.9000000000000004,
+        "total_lb": 8.6,
         "unit": "kg"
       }
     },
@@ -8457,67 +8418,41 @@
       "request": {
         "people": 10,
         "appetite": "light",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "5 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "1 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "2 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "1.1 kg"
+            "qty": "1.6 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "0.8 kg"
+            "qty": "1.2 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1 kg"
+            "qty": "1.4 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.39,
+        "per_person_kg": 0.42,
         "per_person_lb": 0.9,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 3.9000000000000004,
-        "total_lb": 8.6,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 4.2,
+        "total_lb": 9.3,
         "unit": "kg"
       }
     },
@@ -8715,6 +8650,9 @@
         "people": 10,
         "appetite": "normal",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -8749,6 +8687,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "2 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "1.5 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "1.1 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1.3 kg"
           }
         ],
         "order": [
@@ -8756,13 +8709,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.49,
+        "per_person_lb": 1.1,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.0,
-        "total_lb": 2.2,
+        "total_kg": 4.9,
+        "total_lb": 10.8,
         "unit": "kg"
       }
     },
@@ -9127,67 +9083,41 @@
       "request": {
         "people": 10,
         "appetite": "normal",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "5 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "1 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "2 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "1.5 kg"
+            "qty": "2.1 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "1.1 kg"
+            "qty": "1.6 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1.3 kg"
+            "qty": "1.9 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.49,
-        "per_person_lb": 1.1,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 4.9,
-        "total_lb": 10.8,
+        "per_person_kg": 0.56,
+        "per_person_lb": 1.2,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 5.6000000000000005,
+        "total_lb": 12.3,
         "unit": "kg"
       }
     },
@@ -9385,6 +9315,9 @@
         "people": 10,
         "appetite": "heavy",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -9419,6 +9352,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "2 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "2.1 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "1.6 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1.8 kg"
           }
         ],
         "order": [
@@ -9426,13 +9374,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.65,
+        "per_person_lb": 1.4,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.0,
-        "total_lb": 2.2,
+        "total_kg": 6.5,
+        "total_lb": 14.3,
         "unit": "kg"
       }
     },
@@ -9797,67 +9748,41 @@
       "request": {
         "people": 10,
         "appetite": "heavy",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "5 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "1 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "2 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "2.1 kg"
+            "qty": "2.9 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "1.6 kg"
+            "qty": "2.2 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1.8 kg"
+            "qty": "2.6 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.65,
-        "per_person_lb": 1.4,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 6.5,
-        "total_lb": 14.3,
+        "per_person_kg": 0.77,
+        "per_person_lb": 1.7,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 7.7,
+        "total_lb": 17.0,
         "unit": "kg"
       }
     },
@@ -10055,6 +9980,9 @@
         "people": 12,
         "appetite": "light",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -10089,6 +10017,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "3 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "1.3 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "1 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1.2 kg"
           }
         ],
         "order": [
@@ -10096,13 +10039,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.11,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.4,
+        "per_person_lb": 0.9,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.3,
-        "total_lb": 2.9,
+        "total_kg": 4.800000000000001,
+        "total_lb": 10.6,
         "unit": "kg"
       }
     },
@@ -10467,67 +10413,41 @@
       "request": {
         "people": 12,
         "appetite": "light",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "6 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "1.3 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "3 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "1.3 kg"
+            "qty": "1.9 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "1 kg"
+            "qty": "1.4 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1.2 kg"
+            "qty": "1.7 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.4,
+        "per_person_kg": 0.42,
         "per_person_lb": 0.9,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 4.800000000000001,
-        "total_lb": 10.6,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 5.0,
+        "total_lb": 11.0,
         "unit": "kg"
       }
     },
@@ -10725,6 +10645,9 @@
         "people": 12,
         "appetite": "normal",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -10759,6 +10682,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "3 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "1.8 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "1.4 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1.6 kg"
           }
         ],
         "order": [
@@ -10766,13 +10704,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.11,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.51,
+        "per_person_lb": 1.1,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.3,
-        "total_lb": 2.9,
+        "total_kg": 6.1000000000000005,
+        "total_lb": 13.4,
         "unit": "kg"
       }
     },
@@ -11137,67 +11078,41 @@
       "request": {
         "people": 12,
         "appetite": "normal",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "6 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "1.3 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "3 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "1.8 kg"
+            "qty": "2.6 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "1.4 kg"
+            "qty": "1.9 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1.6 kg"
+            "qty": "2.3 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.51,
-        "per_person_lb": 1.1,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 6.1000000000000005,
-        "total_lb": 13.4,
+        "per_person_kg": 0.57,
+        "per_person_lb": 1.3,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 6.800000000000001,
+        "total_lb": 15.0,
         "unit": "kg"
       }
     },
@@ -11395,6 +11310,9 @@
         "people": 12,
         "appetite": "heavy",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -11429,6 +11347,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "3 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "2.5 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "1.8 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "2.1 kg"
           }
         ],
         "order": [
@@ -11436,13 +11369,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.11,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.64,
+        "per_person_lb": 1.4,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.3,
-        "total_lb": 2.9,
+        "total_kg": 7.7,
+        "total_lb": 17.0,
         "unit": "kg"
       }
     },
@@ -11807,67 +11743,41 @@
       "request": {
         "people": 12,
         "appetite": "heavy",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "6 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "1.3 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "3 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "3 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "2.5 kg"
+            "qty": "3.5 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "1.8 kg"
+            "qty": "2.6 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "2.1 kg"
+            "qty": "3.1 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.64,
-        "per_person_lb": 1.4,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 7.7,
-        "total_lb": 17.0,
+        "per_person_kg": 0.77,
+        "per_person_lb": 1.7,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 9.200000000000001,
+        "total_lb": 20.3,
         "unit": "kg"
       }
     },
@@ -12065,6 +11975,9 @@
         "people": 16,
         "appetite": "light",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -12099,6 +12012,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "4 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "1.8 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "1.3 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1.5 kg"
           }
         ],
         "order": [
@@ -12106,13 +12034,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.39,
+        "per_person_lb": 0.9,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.6,
-        "total_lb": 3.5,
+        "total_kg": 6.2,
+        "total_lb": 13.7,
         "unit": "kg"
       }
     },
@@ -12477,67 +12408,41 @@
       "request": {
         "people": 16,
         "appetite": "light",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "8 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "6 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "1.6 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "4 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "1.8 kg"
+            "qty": "2.5 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "1.3 kg"
+            "qty": "1.9 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1.5 kg"
+            "qty": "2.2 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.39,
+        "per_person_kg": 0.41,
         "per_person_lb": 0.9,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 6.2,
-        "total_lb": 13.7,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 6.6000000000000005,
+        "total_lb": 14.6,
         "unit": "kg"
       }
     },
@@ -12735,6 +12640,9 @@
         "people": 16,
         "appetite": "normal",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -12769,6 +12677,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "4 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "2.4 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "1.8 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "2.1 kg"
           }
         ],
         "order": [
@@ -12776,13 +12699,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.49,
+        "per_person_lb": 1.1,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.6,
-        "total_lb": 3.5,
+        "total_kg": 7.9,
+        "total_lb": 17.4,
         "unit": "kg"
       }
     },
@@ -13147,67 +13073,41 @@
       "request": {
         "people": 16,
         "appetite": "normal",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "8 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "6 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "1.6 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "4 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "2.4 kg"
+            "qty": "3.4 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "1.8 kg"
+            "qty": "2.6 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "2.1 kg"
+            "qty": "3 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.49,
-        "per_person_lb": 1.1,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 7.9,
-        "total_lb": 17.4,
+        "per_person_kg": 0.56,
+        "per_person_lb": 1.2,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 9.0,
+        "total_lb": 19.8,
         "unit": "kg"
       }
     },
@@ -13405,6 +13305,9 @@
         "people": 16,
         "appetite": "heavy",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -13439,6 +13342,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "4 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "3.2 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "2.4 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "2.8 kg"
           }
         ],
         "order": [
@@ -13446,13 +13364,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.63,
+        "per_person_lb": 1.4,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 1.6,
-        "total_lb": 3.5,
+        "total_kg": 10.0,
+        "total_lb": 22.0,
         "unit": "kg"
       }
     },
@@ -13817,67 +13738,41 @@
       "request": {
         "people": 16,
         "appetite": "heavy",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "8 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "6 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "1.6 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "4 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "4 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "3.2 kg"
+            "qty": "4.6 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "2.4 kg"
+            "qty": "3.5 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "2.8 kg"
+            "qty": "4 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.63,
-        "per_person_lb": 1.4,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 10.0,
-        "total_lb": 22.0,
+        "per_person_kg": 0.76,
+        "per_person_lb": 1.7,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 12.100000000000001,
+        "total_lb": 26.7,
         "unit": "kg"
       }
     },
@@ -14075,6 +13970,9 @@
         "people": 20,
         "appetite": "light",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -14109,6 +14007,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "4 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "2.2 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "1.6 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "1.9 kg"
           }
         ],
         "order": [
@@ -14116,13 +14029,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.39,
+        "per_person_lb": 0.9,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 2.0,
-        "total_lb": 4.4,
+        "total_kg": 7.7,
+        "total_lb": 17.0,
         "unit": "kg"
       }
     },
@@ -14487,67 +14403,41 @@
       "request": {
         "people": 20,
         "appetite": "light",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "10 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "7 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "2 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "5 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "4 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "2.2 kg"
+            "qty": "3.1 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "1.6 kg"
+            "qty": "2.3 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "1.9 kg"
+            "qty": "2.7 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.39,
+        "per_person_kg": 0.41,
         "per_person_lb": 0.9,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 7.7,
-        "total_lb": 17.0,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 8.200000000000001,
+        "total_lb": 18.1,
         "unit": "kg"
       }
     },
@@ -14745,6 +14635,9 @@
         "people": 20,
         "appetite": "normal",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -14779,6 +14672,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "4 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "3 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "2.2 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "2.6 kg"
           }
         ],
         "order": [
@@ -14786,13 +14694,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.49,
+        "per_person_lb": 1.1,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 2.0,
-        "total_lb": 4.4,
+        "total_kg": 9.8,
+        "total_lb": 21.6,
         "unit": "kg"
       }
     },
@@ -15157,67 +15068,41 @@
       "request": {
         "people": 20,
         "appetite": "normal",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "10 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "7 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "2 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "5 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "4 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "3 kg"
+            "qty": "4.2 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "2.2 kg"
+            "qty": "3.2 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "2.6 kg"
+            "qty": "3.7 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.49,
-        "per_person_lb": 1.1,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 9.8,
-        "total_lb": 21.6,
+        "per_person_kg": 0.56,
+        "per_person_lb": 1.2,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 11.200000000000001,
+        "total_lb": 24.7,
         "unit": "kg"
       }
     },
@@ -15415,6 +15300,9 @@
         "people": 20,
         "appetite": "heavy",
         "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio",
           "chorizo",
           "morcilla",
           "mollejas",
@@ -15449,6 +15337,21 @@
             "cut": "provoleta",
             "note": "Charr base, lava center. Slide off onto bread, do not flip.",
             "qty": "4 pcs"
+          },
+          {
+            "cut": "tira",
+            "note": "",
+            "qty": "4.1 kg"
+          },
+          {
+            "cut": "bife-chorizo",
+            "note": "",
+            "qty": "3.1 kg"
+          },
+          {
+            "cut": "vacio",
+            "note": "",
+            "qty": "3.5 kg"
           }
         ],
         "order": [
@@ -15456,13 +15359,16 @@
           "morcilla",
           "chorizo",
           "mollejas",
-          "chinchulines"
+          "chinchulines",
+          "bife-chorizo",
+          "vacio",
+          "tira"
         ],
-        "per_person_kg": 0.1,
-        "per_person_lb": 0.2,
+        "per_person_kg": 0.64,
+        "per_person_lb": 1.4,
         "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 2.0,
-        "total_lb": 4.4,
+        "total_kg": 12.700000000000001,
+        "total_lb": 28.0,
         "unit": "kg"
       }
     },
@@ -15827,67 +15733,41 @@
       "request": {
         "people": 20,
         "appetite": "heavy",
-        "cuts": [],
+        "cuts": [
+          "tira",
+          "bife-chorizo",
+          "vacio"
+        ],
         "unit": "kg"
       },
       "response": {
         "items": [
           {
-            "cut": "chorizo",
-            "note": "No pink center — 70°C. Juicy means juicy, not raw.",
-            "qty": "10 pcs"
-          },
-          {
-            "cut": "morcilla",
-            "note": "Off the fire just before the skin gets ready to crack.",
-            "qty": "7 pcs"
-          },
-          {
-            "cut": "mollejas",
-            "note": "Dark crust, molten center. Undercooked inside is wrong — it must set.",
-            "qty": "2 kg"
-          },
-          {
-            "cut": "chinchulines",
-            "note": "Snappy, not leathery. Low heat from then on.",
-            "qty": "5 pcs"
-          },
-          {
-            "cut": "provoleta",
-            "note": "Charr base, lava center. Slide off onto bread, do not flip.",
-            "qty": "4 pcs"
-          },
-          {
             "cut": "tira",
             "note": "",
-            "qty": "4.1 kg"
+            "qty": "5.8 kg"
           },
           {
             "cut": "bife-chorizo",
             "note": "",
-            "qty": "3.1 kg"
+            "qty": "4.3 kg"
           },
           {
             "cut": "vacio",
             "note": "",
-            "qty": "3.5 kg"
+            "qty": "5.1 kg"
           }
         ],
         "order": [
-          "provoleta",
-          "morcilla",
-          "chorizo",
-          "mollejas",
-          "chinchulines",
           "bife-chorizo",
           "vacio",
           "tira"
         ],
-        "per_person_kg": 0.64,
-        "per_person_lb": 1.4,
-        "tip": "Achuras hit the grate first while the fire is greedy, then the thin cuts. The rack is the finale.",
-        "total_kg": 12.700000000000001,
-        "total_lb": 28.0,
+        "per_person_kg": 0.76,
+        "per_person_lb": 1.7,
+        "tip": "Thin cuts first over lively embers, thicker and slower cuts after. Keep it moving.",
+        "total_kg": 15.200000000000001,
+        "total_lb": 33.5,
         "unit": "kg"
       }
     },

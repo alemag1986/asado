@@ -32,11 +32,13 @@ CUT_SETS = [
 MEAT_KG = [2.0, 4.0, 8.0, 16.0]
 READY_BY = ["13:00", "20:00", "22:30"]
 # Achuras are picks inside `cuts` now (no more on/off flag).
+BEEF_DEFAULTS = ["tira", "bife-chorizo", "vacio"]
 ACHURA_CUTS = ["chorizo", "morcilla", "mollejas", "chinchulines", "provoleta"]
 
 
 def with_achuras(cuts: list[str]) -> list[str]:
-    return list(dict.fromkeys([*cuts, *ACHURA_CUTS]))
+    base = cuts or BEEF_DEFAULTS
+    return list(dict.fromkeys([*base, *ACHURA_CUTS]))
 
 
 def get(path: str) -> dict:
@@ -80,7 +82,7 @@ def build_examples(catalog: dict) -> dict:
         for appetite in APPETITES:
             for achuras in (True, False):
                 for cuts in CUT_SETS:
-                    selected = with_achuras(cuts) if achuras else cuts
+                    selected = with_achuras(cuts) if achuras else (cuts or BEEF_DEFAULTS)
                     req = {"people": people, "appetite": appetite, "cuts": selected, "unit": "kg"}
                     plans.append({"request": req, "response": post("/api/plan", req)})
 
