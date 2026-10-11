@@ -19,8 +19,16 @@ async fn main() {
         .with(tracing_subscriber::fmt::layer())
         .init();
 
+    let app_state = routes::AppState::new();
+    tracing::info!(
+        url = %app_state.model.url,
+        model = %app_state.model.model,
+        live = app_state.model.live(),
+        "model client configured"
+    );
+
     let app = Router::new()
-        .nest("/api", routes::router(routes::AppState::new()))
+        .nest("/api", routes::router(app_state))
         .layer(CorsLayer::permissive())
         .layer(TraceLayer::new_for_http());
 

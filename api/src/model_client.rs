@@ -171,22 +171,25 @@ pub async fn analyze(cfg: &ModelConfig, cut: &Cut, image: &[u8], probe_c: Option
         .build()
         .expect("reqwest client");
 
-    for attempt in 0..2 {
+    // Retry transient failures (transport errors, 5xx, upstream 429 rate-limit)
+    // up to 3 attempts. Hard 4xx rejections (e.g. bad request) give up at once.
+    for attempt in 0..3 {
         let mut req = client.post(&url).json(&body);
         if let Some(key) = &cfg.api_key {
             req = req.bearer_auth(key);
         }
 
-        let resp = req.send().await;
-
-        let ok = match &resp {
-            Ok(r) => r.status().is_success(),
-            Err(_) => false,
+        let resp = match req.send().await {
+            Ok(r) => r,
+            Err(e) => {
+                tracing::warn!(attempt, "model request failed: {e}");
+                sleep_backoff(attempt, None).await;
+                continue;
+            }
         };
-        let is_client_err = matches!(&resp, Ok(r) if r.status().is_client_error());
 
-        if ok {
-            if let Ok(parsed) = resp.unwrap().json::<ChatResp>().await {
+        if resp.status().is_success() {
+            if let Ok(parsed) = resp.json::<ChatResp>().await {
                 let content = parsed
                     .choices
                     .first()
@@ -199,15 +202,36 @@ pub async fn analyze(cfg: &ModelConfig, cut: &Cut, image: &[u8], probe_c: Option
             break;
         }
 
-        if is_client_err {
+        let status = resp.status();
+        if status == reqwest::StatusCode::TOO_MANY_REQUESTS {
+            tracing::warn!(attempt, "model rate-limited upstream (429) — retrying");
+            sleep_backoff(attempt, Some(1200)).await;
+            continue;
+        }
+
+        if status.is_client_error() {
             tracing::warn!(attempt, "model rejected request: {resp:?}");
             break;
         }
 
-        tracing::warn!(attempt, "model request failed: {resp:?}");
+        tracing::warn!(attempt, "model upstream error {status}: {resp:?}");
+        sleep_backoff(attempt, None).await;
     }
 
+    tracing::warn!(
+        model = cfg.model,
+        "model unavailable — serving canned analysis"
+    );
     default_analysis(cut, probe_c)
+}
+
+/// Backoff between model retries: fixed base for 429s, capped exponential for errors.
+async fn sleep_backoff(attempt: u32, base_ms: Option<u64>) {
+    let ms = match base_ms {
+        Some(base) => base.saturating_mul(attempt as u64 + 1),
+        None => 300u64.saturating_mul(1u64 << attempt.min(3)),
+    };
+    tokio::time::sleep(std::time::Duration::from_millis(ms)).await;
 }
 
 fn parse_analysis(content: &str, cut: &Cut, _probe_c: Option<f64>) -> Option<Analysis> {
